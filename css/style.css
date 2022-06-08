@@ -96,6 +96,32 @@ p {
 .link.current {
   color: var(--booton-color);
 }
+/* line nav */
+
+.nav-item {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  margin-top: 32px;
+  }
+
+.link.current::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--booton-color);
+  border-radius: 2px;
+  }
+/* .link:hover::after {
+  display: block;
+} */
+.link::after {
+  display: block;
+}
+
+/* contacts */
 .icon-hed {
   padding: 0;
   display: inline;
@@ -104,7 +130,6 @@ p {
   height: 16px;
   background-size: contain;
 }
-/* contacts */
 .contacts {
   display: flex;
   /* margin-left: 10px; */
