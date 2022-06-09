@@ -4,7 +4,7 @@
   --texst-color: #757575;
   --booton-color: #2196f3;
   --footer-header-backgraund: #2f303a;
-  --timing-fuction:cubic-bezier(0.4, 0, 0.2, 1);
+  --timing-fuction: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   margin-left: auto;
@@ -94,7 +94,7 @@ p {
 .link:hover,
 .link:focus {
   color: var(--booton-color);
-  }
+}
 .link.current {
   color: var(--booton-color);
 }
@@ -107,7 +107,7 @@ p {
   margin-top: 32px;
 }
 
-.link.current::after {
+.link.current::after, .link:hover::after {
   position: absolute;
   bottom: 0;
   content: "";
@@ -115,11 +115,9 @@ p {
   height: 4px;
   background-color: var(--booton-color);
   border-radius: 2px;
-}
-
-.link::after {
   display: block;
 }
+
 
 /* contacts */
 .icon-hed {
@@ -195,7 +193,7 @@ p {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
- }
+}
 .backdrop.is-hidden {
   display: none;
   opacity: 0;
@@ -216,7 +214,6 @@ p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  
 }
 .modal-close {
   position: fixed;
@@ -254,7 +251,8 @@ p {
   min-width: 200px;
   border-radius: 4px;
   border: 0;
-  transition: background-color 250ms var(--timing-fuction),color 250ms var(--timing-fuction);
+  transition: background-color 250ms var(--timing-fuction),
+    color 250ms var(--timing-fuction);
 }
 .button-hero:hover,
 .button-hero:focus {
@@ -283,7 +281,8 @@ p {
   text-align: center;
   border-radius: 4px;
   border: 0;
-  transition: background-color 250ms var(--timing-fuction),color 250ms var(--timing-fuction);
+  transition: background-color 250ms var(--timing-fuction),
+    color 250ms var(--timing-fuction);
 }
 .button-portfo:hover,
 .button-portfo:focus {
@@ -292,8 +291,8 @@ p {
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: box-shadow 250ms var(--timing-fuction);
- }
+  transition: box-shadow 250ms var(--timing-fuction);
+}
 
 /*___section____ */
 
@@ -448,7 +447,8 @@ img {
   height: 44px;
   color: rgba(175, 177, 184, 1);
   border-radius: 50%;
-  transition: color 250ms var(--timing-fuction), background-color 250ms var(--timing-fuction);
+  transition: color 250ms var(--timing-fuction),
+    background-color 250ms var(--timing-fuction);
 }
 .socials:hover,
 .socials:focus {
@@ -483,7 +483,8 @@ img {
   justify-content: center;
   background-size: contain;
   color: #afb1b8;
-  transition: color 250ms var(--timing-fuction), border 250ms var(--timing-fuction);
+  transition: color 250ms var(--timing-fuction),
+    border 250ms var(--timing-fuction);
 }
 .icons-client:hover,
 .icons-client:focus {
@@ -523,7 +524,6 @@ img {
   left: 0;
   width: 370px;
   height: 294px;
-  
 
   margin: 0;
   padding: 63px 24px;
@@ -617,7 +617,7 @@ img {
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--booton-color);
- }
+}
 
 /* social-footer */
 .subtitle-social {
@@ -634,7 +634,7 @@ img {
   margin-left: 70px;
   width: 206px;
   flex-direction: column;
- }
+}
 .social-icons-footer {
   justify-content: space-between;
 }
