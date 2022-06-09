@@ -118,7 +118,6 @@ p {
   display: block;
 }
 
-
 /* contacts */
 .icon-hed {
   padding: 0;
@@ -533,7 +532,7 @@ img {
   color: #ffffff;
   background: rgba(33, 150, 243, 0.9);
   transform: translatey(100%);
-  transition: 250ms var(--timing-fuction);
+  transition: transform 250ms var(--timing-fuction);
 }
 .p-item:hover .overlay,
 .p-item:focus .overlay {
