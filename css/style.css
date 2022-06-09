@@ -107,15 +107,16 @@ p {
   margin-top: 32px;
 }
 
-.link.current::after, .link:hover::after {
+.link.current::after,
+.link:hover::after {
   position: absolute;
+  display: block;
   bottom: 0;
   content: "";
   width: 100%;
   height: 4px;
   background-color: var(--booton-color);
   border-radius: 2px;
-  display: block;
 }
 
 /* contacts */
@@ -192,19 +193,24 @@ p {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms var(--timing-fuction);
 }
 .backdrop.is-hidden {
-  display: none;
+  /* display: none; */
   opacity: 0;
-  visibility: collapse;
+  /* visibility: collapse; */
   pointer-events: none;
 }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0, 5);
+}
+
 .modal {
   /* центрируем модалку */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   width: 528px;
   height: 581px;
@@ -213,6 +219,8 @@ p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--timing-fuction);
 }
 .modal-close {
   position: fixed;
@@ -233,6 +241,7 @@ p {
   height: 18px;
   fill: #212121;
 }
+
 /*___ BOOtON ___*/
 
 .button-hero {
@@ -553,9 +562,6 @@ img {
   position: relative;
   overflow: hidden;
 }
-/* .overlay {
-  transform: translatey(0);
-  } */
 
 .title-portfo {
   padding-bottom: 4px;
