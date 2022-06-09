@@ -4,6 +4,7 @@
   --texst-color: #757575;
   --booton-color: #2196f3;
   --footer-header-backgraund: #2f303a;
+  --timing-fuction:cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   margin-left: auto;
@@ -80,7 +81,7 @@ p {
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-fuction);
 }
 .nav-contact {
   display: flex;
@@ -128,11 +129,12 @@ p {
   width: 16px;
   height: 16px;
   background-size: contain;
-  /* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: fill 250ms var(--timing-fuction);
 }
 .contacts {
   display: flex;
   color: var(--texst-color);
+  transition: color 250ms var(--timing-fuction);
 }
 .contacts:hover,
 .icon-hed:hover,
@@ -193,7 +195,7 @@ p {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
-}
+ }
 .backdrop.is-hidden {
   display: none;
   opacity: 0;
@@ -214,6 +216,7 @@ p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  
 }
 .modal-close {
   position: fixed;
@@ -251,7 +254,7 @@ p {
   min-width: 200px;
   border-radius: 4px;
   border: 0;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-fuction),color 250ms var(--timing-fuction);
 }
 .button-hero:hover,
 .button-hero:focus {
@@ -280,7 +283,7 @@ p {
   text-align: center;
   border-radius: 4px;
   border: 0;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms var(--timing-fuction),color 250ms var(--timing-fuction);
 }
 .button-portfo:hover,
 .button-portfo:focus {
@@ -289,6 +292,7 @@ p {
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 250ms var(--timing-fuction);
  }
 
 /*___section____ */
@@ -444,7 +448,7 @@ img {
   height: 44px;
   color: rgba(175, 177, 184, 1);
   border-radius: 50%;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-fuction), background-color 250ms var(--timing-fuction);
 }
 .socials:hover,
 .socials:focus {
@@ -479,7 +483,7 @@ img {
   justify-content: center;
   background-size: contain;
   color: #afb1b8;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-fuction), border 250ms var(--timing-fuction);
 }
 .icons-client:hover,
 .icons-client:focus {
@@ -504,7 +508,7 @@ img {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
-  transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms var(--timing-fuction);
 }
 
 .p-item:hover,
@@ -512,6 +516,24 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: 294px;
+  
+
+  margin: 0;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translatey(100%);
+  transition: 250ms var(--timing-fuction);
 }
 .p-item:hover .overlay,
 .p-item:focus .overlay {
@@ -535,23 +557,7 @@ img {
 /* .overlay {
   transform: translatey(0);
   } */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 370px;
-  height: 294px;
-  transform: translatey(100%);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  margin: 0;
-  padding: 63px 24px;
-  font-size: 18px;
-  line-height: 28px;
-  text-align: left;
-  color: #ffffff;
-  background: rgba(33, 150, 243, 0.9);
-}
 .title-portfo {
   padding-bottom: 4px;
   font-weight: 700;
@@ -602,7 +608,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--timing-fuction);
 }
 
 .footer-contacts > pre {
